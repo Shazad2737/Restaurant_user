@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import '../widget/custom_button.dart';
+import '../../widget/custom_button.dart';
 
 class ForgotpasswordScreen extends StatelessWidget {
   const ForgotpasswordScreen({Key? key}) : super(key: key);

@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:restaurant_user/ui/screens/signup_screen.dart';
-import '../widget/custom_button.dart';
+
+import '../../../widget/custom_button.dart';
 
 class ProductScreen extends StatelessWidget {
   const ProductScreen({Key? key}) : super(key: key);
@@ -12,6 +10,11 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      extendBodyBehindAppBar: true,
       backgroundColor: Color(0xff56B03F),
       body: Stack(children: [
         Align(

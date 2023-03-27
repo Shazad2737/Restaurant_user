@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_user/ui/screens/forgetpassword_screen.dart';
-import 'package:restaurant_user/ui/screens/home_screen.dart';
-import 'package:restaurant_user/ui/screens/product_screen.dart';
-import 'package:restaurant_user/ui/screens/signup_screen.dart';
-import 'package:restaurant_user/ui/screens/signin_screen.dart';
+import 'package:restaurant_user/ui/screens/main_pages/main_screen.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -34,6 +30,6 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home: const ProductScreen());
+        home: MainScreen());
   }
 }

@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/material.dart';
-import 'package:restaurant_user/ui/screens/signin_screen.dart';
-import '../widget/custom_button.dart';
+import 'dart:ui';
 
-class SignupScreen extends StatelessWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+import 'package:flutter/material.dart';
+import 'package:restaurant_user/ui/screens/login_pages/signup_screen.dart';
+import '../../widget/custom_button.dart';
+
+class SigninScreen extends StatelessWidget {
+  const SigninScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +16,8 @@ class SignupScreen extends StatelessWidget {
       body: Stack(
         children: [
           Image.network(
-            //"https://i.pinimg.com/564x/54/0c/a4/540ca4e02b14621b94dea36d5fec4132.jpg",
-            //"https://i.pinimg.com/564x/90/ce/02/90ce0267c41a33b4abb5b0d30575e542.jpg",
-            "https://i.pinimg.com/564x/db/5d/de/db5ddee91eaa1a8f0f2dabafe6414bd3.jpg",
-            //"https://burst.shopifycdn.com/photos/flatlay-iron-skillet-with-meat-and-other-food.jpg?width=1200&format=pjpg&exif=1&iptc=1",
-            height: MediaQuery.of(context).size.height / 3.5,
+            "https://blog-images-1.pharmeasy.in/blog/production/wp-content/uploads/2022/05/12111806/17.jpg",
+            height: MediaQuery.of(context).size.height / 3,
             width: MediaQuery.of(context).size.width / 1,
             fit: BoxFit.cover,
           ),
@@ -45,11 +44,14 @@ class SignupScreen extends StatelessWidget {
                       Center(
                         child: Image.asset(
                           "assets/images/logo.png",
-                          height: 100,
+                          height: 150,
                         ),
                       ),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Text(
-                        "Getting Started",
+                        "Let's get something",
                         style: TextStyle(
                           color: Colors.black87,
                           fontSize: 24,
@@ -57,28 +59,17 @@ class SignupScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 3,
+                        height: 2,
                       ),
-                      Text("Create account to continue",
-                          style: TextStyle(
-                              color: Color(0xff18786D),
-                              fontSize: 15,
-                              fontWeight: FontWeight.w800)),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(
-                            Icons.drive_file_rename_outline_outlined,
-                            color: Colors.black,
-                            size: 20,
-                          ),
-                          hintText: 'Name',
-                        ),
+                      Text(
+                        "Good to see you back",
+                        style: TextStyle(
+                            color: Color(0xff18786D),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w800),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 25,
                       ),
                       TextField(
                         decoration: InputDecoration(
@@ -91,17 +82,7 @@ class SignupScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        obscureText: false,
-                        decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.email_outlined,
-                                size: 20, color: Colors.black),
-                            hintText: 'Email'),
-                      ),
-                      SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       TextField(
                         obscureText: true,
@@ -114,22 +95,18 @@ class SignupScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 25,
                       ),
-                      TextField(
-                        obscureText: false,
-                        decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.lock_outline,
-                                size: 20, color: Colors.black),
-                            suffixIcon: Icon(Icons.visibility_off_outlined,
-                                size: 20, color: Colors.black),
-                            hintText: 'Confirm Password'),
+                      Text(
+                        "Forgot Password?",
+                        style: TextStyle(
+                            color: Color(0xff006758),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w800),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
+                      SizedBox(height: 60),
                       CustomButton(
-                        label: "Sign Up",
+                        label: "Sign In",
                         onPressed: () {},
                         color: Color(0xff006758),
                       ),
@@ -148,7 +125,7 @@ class SignupScreen extends StatelessWidget {
                         child: Wrap(
                           children: [
                             Text(
-                              "Already have an account?",
+                              "Don't have an account",
                               style: TextStyle(
                                 color: Colors.black87,
                                 fontSize: 16,
@@ -163,12 +140,12 @@ class SignupScreen extends StatelessWidget {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => SigninScreen(),
+                                    builder: (context) => SignupScreen(),
                                   ),
                                 );
                               },
                               child: Text(
-                                "Sign In",
+                                "Sign Up",
                                 style: TextStyle(
                                   color: Color(0xff006758),
                                   fontSize: 16,
